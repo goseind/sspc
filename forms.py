@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtfforms import DecimalField, StringField, SubmitField
-from wtfforms.validators import DataRequired
+from wtforms import DecimalField, StringField, SubmitField
+from wtforms.validators import DataRequired
 
 class SavingsPlanCalculator(FlaskForm):
     # General Fields (required)
@@ -13,6 +13,6 @@ class SavingsPlanCalculator(FlaskForm):
     current_allocation_c = DecimalField('Asset Class C')
     current_allocation_d = DecimalField('Asset Class D')
     current_allocation_e = DecimalField('Asset Class E')
-    
+
     # Functional Fields
     calculate = SubmitField('Calculte new rates')

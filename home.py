@@ -1,6 +1,8 @@
 from flask import Flask, render_template
+from forms import SavingsPlanCalculator
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = '848f62f0482e1ea4ff7b03f8ba2205cf'
 
 # Routing for root directory
 @app.route("/")

@@ -4,8 +4,8 @@ from wtforms.validators import DataRequired
 
 class SavingsPlanCalculator(FlaskForm):
     # General Fields (required)
-    new_capital = DecimalField('Available Capital', validators=[DataRequired()])
-    time_period = DecimalField('Time Period in Months', validators=[DataRequired()])
+    new_capital = DecimalField('Newly Available Capital', validators=[DataRequired()])
+    time_period = DecimalField('Investment Period in Months', validators=[DataRequired()])
 
     # Asset Fields (min. two required)
     current_allocation_a = DecimalField('Asset Class A', validators=[DataRequired()])

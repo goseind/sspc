@@ -4,6 +4,7 @@
     <h1>Simple Savings Plan Calculator</h1>
     <form action="" method="POST">
         <fieldset>
+        <p>Start with entering your (newly) available capital and time period over which you want to invest</p>
         <div class="form-group">
             {{ form.new_capital.label(class="form-control-label") }}
             {{ form.new_capital(class="form-control form-control-lg") }}
@@ -12,29 +13,31 @@
             {{ form.time_period.label(class="form-control-label") }}
             {{ form.time_period(class="form-control form-control-lg") }}
         </div>
-        <table>
-            <tr>
-                <th>Asset Class</th>
-                <th>Asset Allocation Currently in EUR</th>
-                <th>Asset Allocation %</th>
-                <th>Future Allocation</th>
-                <th>Future Savings Rate</th>
-            </tr>
-            <tr>
-                <th>Stocks</th>
-            <tr>
-                <th>Bonds</th>
-            </tr>
-            <tr>
-                <th>ETFs</th>
-            </tr>
-            <tr>
-                <th>Crypto-Assets</th>
-            </tr>
-            <tr>
-                <th>Commodities</th>
-            </tr>
-        </table>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    Select Your Assets Classes
+                </div>
+                <div class="col">
+                    Enter the currently invested Amount
+                </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Asset Class</option>
+                    <option value="1">Stocks</option>
+                    <option value="2">Bonds</option>
+                    <option value="3">Commodities</option>
+                    <option value="3">ETFs</option>
+                    <option value="3">Crypto-Assets</option>
+                  </select>
+              </div>
+              <div class="col">
+                    {{ form.current_allocation_a(class="form-control form-control-lg") }}
+              </div>
+            </div>
+          </div>
         </fieldset>
         <div class="form-group">
             {{ form.calculate(class="btn btn-outline-info") }}

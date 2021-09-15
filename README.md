@@ -13,4 +13,4 @@ source env/bin/activate
 export FLASK_APP=home
 flask run
 ```
-Please note, that you should create a virtual environment for pyhton. This directory 'env' as well as other Python files are listed in the .gitignore file.
+Please note, that you should create a virtual environment for pyhton. This directory `env` as well as other Python files are listed in the .gitignore file.

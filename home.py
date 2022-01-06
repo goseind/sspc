@@ -1,6 +1,8 @@
+# Import flask and forms
 from flask import Flask, render_template
 from forms import SavingsPlanCalculator
 
+# Secret key to use forms
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '848f62f0482e1ea4ff7b03f8ba2205cf'
 
